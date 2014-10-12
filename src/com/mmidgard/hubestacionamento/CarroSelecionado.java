@@ -1,11 +1,10 @@
 package com.mmidgard.hubestacionamento;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -14,7 +13,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.mmidgard.hubestacionamento.models.Carro;
 
-public class CarroSelecionado extends Activity {
+public class CarroSelecionado extends GlobalActivity {
 
 	private Carro carro;
 
@@ -43,11 +42,13 @@ public class CarroSelecionado extends Activity {
 
 			map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), map.getMaxZoomLevel() - 5));
 		}
+		
+		adicionarRecarga();
 	}
 
 	private void header() {
 		TextView titulo = (TextView)findViewById(R.id.titulo);
-		TextView add = (TextView)findViewById(R.id.add_carro);
+		Button add = (Button)findViewById(R.id.add_carro);
 		titulo.setText(carro.getPlaca());
 		add.setVisibility(View.INVISIBLE);
 	}

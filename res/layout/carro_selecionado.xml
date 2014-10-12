@@ -10,8 +10,8 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="fill_parent"
-        android:layout_height="150dp" 
-        android:layout_weight="1"/>
+        android:layout_height="150dp"
+        android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -23,14 +23,21 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="02:39 minutos" />
+            android:text="02:39 minutos"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#EA132C"
+            android:drawableLeft="@drawable/carro_checkout"
             android:gravity="center"
-            android:text="Check-out" />
+            android:padding="10dp"
+            android:text="  Check-out"
+            android:textColor="#fff" />
     </LinearLayout>
 
     <include layout="@layout/footer" />

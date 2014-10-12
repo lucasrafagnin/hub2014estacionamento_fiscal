@@ -5,26 +5,23 @@
     android:gravity="center"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:hint="Nome" />
 
-        <EditText
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:hint="Nome" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Placa" />
 
-        <EditText
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:hint="Placa" />
-
-        <Button
-            android:id="@+id/logar"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Criar carro" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/adicionar_carro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#00aeef"
+        android:text="Concluir"
+        android:textColor="#fff" />
 
 </LinearLayout>

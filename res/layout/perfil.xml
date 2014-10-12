@@ -3,12 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#00aeef" >
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:background="#fff" 
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="250dp"
@@ -41,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Senha" />
         </LinearLayout>
-        
+
         <LinearLayout
             android:layout_width="250dp"
             android:layout_height="wrap_content"
@@ -57,16 +60,16 @@
                 android:layout_height="wrap_content"
                 android:hint="Confirmar" />
         </LinearLayout>
+
         <Button
             android:id="@+id/criar_perfil"
-            android:background="#00aeef"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:layout_margin="5dp"
-            android:textStyle="bold"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="Criar perfil" />
+            android:background="#00aeef"
+            android:text="Criar perfil"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>

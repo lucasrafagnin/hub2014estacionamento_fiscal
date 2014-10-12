@@ -2,32 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+     >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Saldo atual: R$40,10" />
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:text="Saldo atual: R$40,10"
+        android:textSize="22sp" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Valor: " />
+            android:text="Valor: "
+            android:textSize="22sp" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,14 +44,16 @@
             android:text="Login: " />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,15 +61,17 @@
             android:text="Senha: " />
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
     </LinearLayout>
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#00aeef"
         android:text="Efetuar pagamento"
-        android:textColor="#fff"
-        android:background="#00aeef" />
+        android:textColor="#fff" />
 
 </LinearLayout>

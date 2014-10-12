@@ -25,18 +25,30 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.mmidgard.hubestacionamento.Login"
-            android:label="@string/app_name" >
+            android:name="com.mmidgard.hubestacionamento.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.mmidgard.hubestacionamento.CarroSelecionado" />
-        <activity android:name="com.mmidgard.hubestacionamento.Inicial" />
-        <activity android:name="com.mmidgard.hubestacionamento.Perfil" />
-        <activity android:name="com.mmidgard.hubestacionamento.AddCarro" />
+        <activity
+            android:name="com.mmidgard.hubestacionamento.CarroSelecionado"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmidgard.hubestacionamento.Inicial"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmidgard.hubestacionamento.Perfil"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmidgard.hubestacionamento.AddCarro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mmidgard.hubestacionamento.Login"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.gms.version"
