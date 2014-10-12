@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,7 +51,7 @@ public class AdapterListExercicios extends BaseAdapter {
 
 		ImageView status = (ImageView)viewItem.findViewById(R.id.carro_status);
 		TextView placa = (TextView)viewItem.findViewById(R.id.carro_placa);
-		Button deletar = (Button)viewItem.findViewById(R.id.deletar);
+		ImageButton deletar = (ImageButton)viewItem.findViewById(R.id.deletar);
 
 		deletar.setOnClickListener(new OnClickListener() {
 
