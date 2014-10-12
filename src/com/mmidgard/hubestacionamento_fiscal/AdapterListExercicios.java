@@ -5,11 +5,15 @@ import java.util.List;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.mmidgard.hubestacionamento_fiscal.dao.CarroDAO;
 import com.mmidgard.hubestacionamento_fiscal.models.Carro;
 
 public class AdapterListExercicios extends BaseAdapter {
@@ -46,8 +50,24 @@ public class AdapterListExercicios extends BaseAdapter {
 
 		ImageView status = (ImageView)viewItem.findViewById(R.id.carro_status);
 		TextView placa = (TextView)viewItem.findViewById(R.id.carro_placa);
+		Button deletar = (Button)viewItem.findViewById(R.id.deletar);
 
-		status.setImageResource(R.drawable.no);
+		deletar.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				CarroDAO cdao = new CarroDAO(context);
+				cdao.delete(carro);
+				Toast.makeText(context, "Deletado com sucesso", Toast.LENGTH_SHORT).show();
+				listaCarros.remove(carro);
+				notifyDataSetChanged();
+			}
+		});
+
+		if (carro.isStatus())
+			status.setImageResource(R.drawable.yes);
+		else
+			status.setImageResource(R.drawable.no);
 		placa.setText(carro.getPlaca());
 
 		return viewItem;

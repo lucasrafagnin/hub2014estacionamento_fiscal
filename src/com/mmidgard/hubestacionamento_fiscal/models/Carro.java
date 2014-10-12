@@ -1,22 +1,41 @@
 package com.mmidgard.hubestacionamento_fiscal.models;
 
 import java.io.Serializable;
-import java.util.Collection;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+@DatabaseTable(tableName = "carro")
 public class Carro implements Serializable {
 
 	private static final long serialVersionUID = 4149085837268143831L;
 
+	@DatabaseField(generatedId = true)
 	private long id;
+	@DatabaseField
 	private String placa;
+	@DatabaseField(canBeNull = true)
 	private String nome;
+	@DatabaseField
 	private boolean status;
-	private Collection<Estacionamento> estacionamentos;
 
-	public Carro(String placa, String nome, boolean status) {
+	public Carro(String placa, boolean status) {
+		this.placa = placa;
+		this.status = status;
+	}
+
+	public Carro() {
+	}
+
+	public Carro(long id, String placa, String nome) {
+		this.id = id;
 		this.placa = placa;
 		this.nome = nome;
-		this.status = status;
+	}
+
+	public Carro(models.Carro carro) {
+		this.nome = carro.descricao;
+		this.placa = carro.placa;
 	}
 
 	public long getId() {
@@ -51,12 +70,13 @@ public class Carro implements Serializable {
 		this.nome = nome;
 	}
 
-	public Collection<Estacionamento> getEstacionamentos() {
-		return estacionamentos;
-	}
-
-	public void setEstacionamentos(Collection<Estacionamento> estacionamentos) {
-		this.estacionamentos = estacionamentos;
-	}
+	// public Collection<Estacionamento> getEstacionamentos() {
+	// return estacionamentos;
+	// }
+	//
+	// public void setEstacionamentos(Collection<Estacionamento>
+	// estacionamentos) {
+	// this.estacionamentos = estacionamentos;
+	// }
 
 }

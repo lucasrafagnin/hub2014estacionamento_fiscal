@@ -20,6 +20,7 @@
         android:orientation="horizontal" >
 
         <EditText
+            android:id="@+id/placa1"
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:background="#fff"
@@ -35,6 +36,7 @@
             android:textSize="40sp" />
 
         <EditText
+            android:id="@+id/placa2"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="#fff"
@@ -43,6 +45,7 @@
             android:textSize="39sp" />
 
         <Button
+            android:id="@+id/buscar"
             android:layout_width="wrap_content"
             android:layout_height="49dp"
             android:background="#303030"
@@ -54,7 +57,19 @@
     <ListView
         android:id="@+id/list_carros"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="@drawable/lista_background" />
+    
+    <Button 
+        android:id="@+id/atualizar"
+        android:layout_gravity="center"
+        android:background="#fff"
+        android:layout_width="fill_parent"
+        android:textColor="#00aeef"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Atualizar"
+        />
 
 </LinearLayout>
