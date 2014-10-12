@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.mmidgard.hubestacionamento.models.Carro;
 
@@ -26,9 +28,18 @@ public class Inicial extends Activity implements OnItemClickListener {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.inicial);
 
+		header();
+
 		listaCarros = new ArrayList<Carro>();
 		criarCarrosTeste();
 		criarLista(listaCarros);
+		
+		adicionarRecarga();
+	}
+
+	private void header() {
+		TextView titulo = (TextView)findViewById(R.id.titulo);
+		titulo.setText("Garagem");
 	}
 
 	private void criarCarrosTeste() {
@@ -54,6 +65,16 @@ public class Inicial extends Activity implements OnItemClickListener {
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		Intent i = new Intent(Inicial.this, CarroSelecionado.class);
+		Carro c = (Carro)adapterExercicios.getItem(arg2);
+		i.putExtra("carro", c);
 		startActivity(i);
+	}
+
+	private void adicionarRecarga() {
+		final Dialog dialog = new Dialog(Inicial.this);
+		dialog.setTitle("Realizar recarga");
+		dialog.setContentView(R.layout.recarga);
+		dialog.setCancelable(true);
+		dialog.show();
 	}
 }
