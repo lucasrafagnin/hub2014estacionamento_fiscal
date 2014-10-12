@@ -24,7 +24,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.mmidgard.hubestacionamento.Login"
+            android:name="com.mmidgard.hubestacionamento.Perfil"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,7 @@
         </activity>
         <activity android:name="com.mmidgard.hubestacionamento.CarroSelecionado" />
         <activity android:name="com.mmidgard.hubestacionamento.Inicial" />
-        <activity android:name="com.mmidgard.hubestacionamento.Perfil" />
+        <activity android:name="com.mmidgard.hubestacionamento.Login" />
         <activity android:name="com.mmidgard.hubestacionamento.AddCarro" />
         <meta-data
            android:name="com.google.android.gms.version"

@@ -1,6 +1,7 @@
 package com.mmidgard.hubestacionamento.models;
 
 import java.io.Serializable;
+import java.util.Collection;
 
 public class Carro implements Serializable {
 
@@ -10,6 +11,7 @@ public class Carro implements Serializable {
 	private String placa;
 	private String nome;
 	private boolean status;
+	private Collection<Estacionamento> estacionamentos;
 
 	public Carro(String placa, String nome, boolean status) {
 		this.placa = placa;
@@ -47,6 +49,14 @@ public class Carro implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public Collection<Estacionamento> getEstacionamentos() {
+		return estacionamentos;
+	}
+
+	public void setEstacionamentos(Collection<Estacionamento> estacionamentos) {
+		this.estacionamentos = estacionamentos;
 	}
 
 }

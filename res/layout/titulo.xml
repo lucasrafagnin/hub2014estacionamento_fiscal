@@ -10,24 +10,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
         android:src="@drawable/logo" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
         android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Meus carros"
         android:textColor="#fff"
         android:textSize="21sp" />
 
     <TextView
-        android:layout_width="25dp"
+        android:background="@drawable/addcarro_background"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:gravity="center"
-        android:layout_weight="1"
         android:textSize="15sp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginRight="5dp"
         android:text="add"
         />
 
