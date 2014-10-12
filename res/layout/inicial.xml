@@ -3,31 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-    <include 
-        layout="@layout/titulo"/>
+
+    <include layout="@layout/titulo" />
 
     <ListView
         android:id="@+id/list_carros"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Recarga" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="R$ 19,00" />
-    </LinearLayout>
+    
+    <include layout="@layout/footer" />
 
 </LinearLayout>

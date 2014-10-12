@@ -13,18 +13,18 @@
         <EditText
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:hint="Usuário" />
+            android:hint="Nome" />
 
         <EditText
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:hint="Senha" />
+            android:hint="Placa" />
 
         <Button
             android:id="@+id/logar"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Logar" />
+            android:text="Criar carro" />
     </LinearLayout>
 
 </LinearLayout>

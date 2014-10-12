@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -13,7 +14,7 @@ import android.widget.ListView;
 
 import com.mmidgard.hubestacionamento.models.Carro;
 
-public class MainActivity extends Activity implements OnItemClickListener {
+public class Inicial extends Activity implements OnItemClickListener {
 
 	private AdapterListExercicios adapterExercicios;
 	private ListView listViewExercicios;
@@ -40,7 +41,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		listaCarros.add(c2);
 		listaCarros.add(c3);
 		listaCarros.add(c4);
-
 	}
 
 	private void criarLista(List<Carro> elementList) {
@@ -53,6 +53,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-
+		Intent i = new Intent(Inicial.this, CarroSelecionado.class);
+		startActivity(i);
 	}
 }
