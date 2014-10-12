@@ -43,14 +43,15 @@ public class AdapterListExercicios extends BaseAdapter {
 	public View getView(int posicao, View view, ViewGroup parent) {
 		final Carro carro = listaCarros.get(posicao);
 		View viewItem = mInflater.inflate(R.layout.carro_item, null);
- 
+
 		ImageView status = (ImageView)viewItem.findViewById(R.id.carro_status);
 		TextView nome = (TextView)viewItem.findViewById(R.id.carro_nome);
 		TextView placa = (TextView)viewItem.findViewById(R.id.carro_placa);
 
+		status.setImageResource(R.drawable.carro_andando);
 		nome.setText(carro.getNome());
 		placa.setText(carro.getPlaca());
-		
+
 		return viewItem;
 	}
 
