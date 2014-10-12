@@ -16,19 +16,37 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:gravity="center"
         android:orientation="horizontal" >
 
         <EditText
-            android:layout_width="0dp"
+            android:layout_width="80dp"
             android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="#fff" />
+            android:background="#fff"
+            android:inputType="textCapCharacters"
+            android:maxLength="3"
+            android:textSize="39sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="#fff"
+            android:textSize="40sp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="#fff"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="39sp" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="49dp"
             android:background="#303030"
-            android:padding="10dp"
+            android:padding="5dp"
             android:text="Buscar"
             android:textColor="#fff" />
     </LinearLayout>
@@ -36,10 +54,7 @@
     <ListView
         android:id="@+id/list_carros"
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:visibility="invisible" />
-
-    <include layout="@layout/footer" />
+        android:layout_height="fill_parent"
+        android:background="@drawable/lista_background" />
 
 </LinearLayout>

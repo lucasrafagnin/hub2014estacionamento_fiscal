@@ -3,13 +3,14 @@ package com.mmidgard.hubestacionamento_fiscal;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.ListView;
 
 import com.mmidgard.hubestacionamento_fiscal.models.Carro;
 
-public class Inicial extends GlobalActivity {
+public class Inicial extends Activity {
 
 	private AdapterListExercicios adapterExercicios;
 	private ListView listViewExercicios;
@@ -25,21 +26,17 @@ public class Inicial extends GlobalActivity {
 
 		listaCarros = new ArrayList<Carro>();
 		criarLista(listaCarros);
-
-		adicionarRecarga();
+		criarCarrosTeste();
 	}
 
-	// private void criarCarrosTeste() {
-	// Carro c = new Carro("abc-1234", "gol branco", true);
-	// Carro c2 = new Carro("abc-1234", "gol branco", true);
-	// Carro c3 = new Carro("abc-1234", "gol branco", true);
-	// Carro c4 = new Carro("abc-1234", "gol branco", true);
-	//
-	// listaCarros.add(c);
-	// listaCarros.add(c2);
-	// listaCarros.add(c3);
-	// listaCarros.add(c4);
-	// }
+	private void criarCarrosTeste() {
+		Carro c = new Carro("abc-1234", "gol branco", true);
+		Carro c2 = new Carro("abc-1234", "gol branco", true);
+		Carro c3 = new Carro("abc-1234", "gol branco", true);
+		Carro c4 = new Carro("abc-1234", "gol branco", true);
+
+		listaCarros.add(c);
+	}
 
 	private void criarLista(List<Carro> elementList) {
 		adapterExercicios = new AdapterListExercicios(this, listaCarros);

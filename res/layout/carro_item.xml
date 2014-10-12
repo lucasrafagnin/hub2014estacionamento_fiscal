@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:padding="5dp" >
+    android:orientation="horizontal" >
 
     <ImageView
         android:id="@+id/carro_status"
@@ -11,34 +10,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/no" />
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/carro_nome"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Gol branco"
-            android:textSize="21sp" />
-
-        <TextView
-            android:id="@+id/carro_placa"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="ABC-1234"
-            android:textSize="23sp" />
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="10dp"
-        android:layout_height="15dp"
+    <TextView
+        android:id="@+id/carro_placa"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/seta" />
+        android:textSize="26sp" />
 
 </LinearLayout>
