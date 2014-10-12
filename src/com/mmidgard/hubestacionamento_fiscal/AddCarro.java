@@ -1,23 +1,20 @@
-package com.mmidgard.hubestacionamento;
+package com.mmidgard.hubestacionamento_fiscal;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Dialog;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import com.mmidgard.hubestacionamento.models.Carro;
+import com.mmidgard.hubestacionamento_fiscal.models.Carro;
 
-public class Inicial extends GlobalActivity implements OnItemClickListener {
+public class AddCarro extends Activity implements OnItemClickListener {
 
 	private AdapterListExercicios adapterExercicios;
 	private ListView listViewExercicios;
@@ -27,32 +24,11 @@ public class Inicial extends GlobalActivity implements OnItemClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.inicial);
-
-		header();
+		setContentView(R.layout.add_carro);
 
 		listaCarros = new ArrayList<Carro>();
 		criarCarrosTeste();
 		criarLista(listaCarros);
-
-		adicionarRecarga();
-	}
-
-	private void header() {
-		TextView titulo = (TextView)findViewById(R.id.titulo);
-		Button addCarro = (Button)findViewById(R.id.add_carro);
-		titulo.setText("Garagem");
-		addCarro.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				final Dialog dialog = new Dialog(Inicial.this);
-				dialog.setTitle("Adicionar carro");
-				dialog.setContentView(R.layout.add_carro);
-				dialog.setCancelable(true);
-				dialog.show();
-			}
-		});
 	}
 
 	private void criarCarrosTeste() {
@@ -77,9 +53,7 @@ public class Inicial extends GlobalActivity implements OnItemClickListener {
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-		Intent i = new Intent(Inicial.this, CarroSelecionado.class);
-		Carro c = (Carro)adapterExercicios.getItem(arg2);
-		i.putExtra("carro", c);
+		Intent i = new Intent(AddCarro.this, CarroSelecionado.class);
 		startActivity(i);
 	}
 }

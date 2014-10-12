@@ -1,4 +1,4 @@
-package com.mmidgard.hubestacionamento;
+package com.mmidgard.hubestacionamento_fiscal;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mmidgard.hubestacionamento.models.Carro;
+import com.mmidgard.hubestacionamento_fiscal.models.Carro;
 
 public class AdapterListExercicios extends BaseAdapter {
 

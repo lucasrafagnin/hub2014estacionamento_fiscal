@@ -1,4 +1,4 @@
-package com.mmidgard.hubestacionamento;
+package com.mmidgard.hubestacionamento_fiscal;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,20 +8,20 @@ import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class Perfil extends Activity {
+public class Login extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.perfil);
+		setContentView(R.layout.login);
 
-		Button perfil = (Button)findViewById(R.id.criar_perfil);
-		perfil.setOnClickListener(new OnClickListener() {
+		Button logar = (Button)findViewById(R.id.logar);
+		logar.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(Perfil.this, Inicial.class);
+				Intent i = new Intent(Login.this, Inicial.class);
 				startActivity(i);
 			}
 		});

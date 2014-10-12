@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mmidgard.hubestacionamento"
+    package="com.mmidgard.hubestacionamento_fiscal"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -25,7 +25,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.mmidgard.hubestacionamento.SplashScreen"
+            android:name="com.mmidgard.hubestacionamento_fiscal.SplashScreen"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -35,19 +35,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mmidgard.hubestacionamento.CarroSelecionado"
+            android:name="com.mmidgard.hubestacionamento_fiscal.CarroSelecionado"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mmidgard.hubestacionamento.Inicial"
+            android:name="com.mmidgard.hubestacionamento_fiscal.Inicial"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mmidgard.hubestacionamento.Perfil"
+            android:name="com.mmidgard.hubestacionamento_fiscal.Perfil"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mmidgard.hubestacionamento.AddCarro"
+            android:name="com.mmidgard.hubestacionamento_fiscal.AddCarro"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.mmidgard.hubestacionamento.Login"
+            android:name="com.mmidgard.hubestacionamento_fiscal.Login"
             android:screenOrientation="portrait" />
 
         <meta-data

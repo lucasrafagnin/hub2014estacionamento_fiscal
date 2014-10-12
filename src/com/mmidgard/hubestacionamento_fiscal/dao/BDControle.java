@@ -1,4 +1,4 @@
-package com.mmidgard.hubestacionamento.dao;
+package com.mmidgard.hubestacionamento_fiscal.dao;
 
 import java.sql.SQLException;
 
@@ -8,9 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
-import com.mmidgard.hubestacionamento.models.Carro;
-import com.mmidgard.hubestacionamento.models.Estacionamento;
-import com.mmidgard.hubestacionamento.models.Motorista;
+import com.mmidgard.hubestacionamento_fiscal.models.Carro;
+import com.mmidgard.hubestacionamento_fiscal.models.Estacionamento;
+import com.mmidgard.hubestacionamento_fiscal.models.Motorista;
 
 public class BDControle<E> extends OrmLiteSqliteOpenHelper {
 

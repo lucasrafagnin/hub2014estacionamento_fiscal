@@ -1,4 +1,4 @@
-package com.mmidgard.hubestacionamento.dao;
+package com.mmidgard.hubestacionamento_fiscal.dao;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

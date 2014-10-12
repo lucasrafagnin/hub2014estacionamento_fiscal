@@ -1,8 +1,8 @@
-package com.mmidgard.hubestacionamento.dao;
+package com.mmidgard.hubestacionamento_fiscal.dao;
 
 import android.content.Context;
 
-import com.mmidgard.hubestacionamento.models.Estacionamento;
+import com.mmidgard.hubestacionamento_fiscal.models.Estacionamento;
 
 public class EstacionamentoDAO extends GenericDAO<Estacionamento> {
 

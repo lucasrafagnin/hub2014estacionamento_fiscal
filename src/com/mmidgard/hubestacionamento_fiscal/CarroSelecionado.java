@@ -1,4 +1,4 @@
-package com.mmidgard.hubestacionamento;
+package com.mmidgard.hubestacionamento_fiscal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.mmidgard.hubestacionamento.models.Carro;
+import com.mmidgard.hubestacionamento_fiscal.models.Carro;
 
 public class CarroSelecionado extends GlobalActivity {
 

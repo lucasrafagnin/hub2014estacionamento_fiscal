@@ -1,4 +1,4 @@
-package com.mmidgard.hubestacionamento.models;
+package com.mmidgard.hubestacionamento_fiscal.models;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
