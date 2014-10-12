@@ -9,6 +9,7 @@ public class Estacionamento implements Serializable {
 	private long id;
 	private Timestamp horaInicio;
 	private Timestamp horaFinal;
+	private double valor;
 
 	public long getId() {
 		return id;
@@ -32,6 +33,14 @@ public class Estacionamento implements Serializable {
 
 	public void setHoraFinal(Timestamp horaFinal) {
 		this.horaFinal = horaFinal;
+	}
+
+	public double getValor() {
+		return valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
 	}
 
 }

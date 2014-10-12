@@ -6,10 +6,10 @@ import java.util.Collection;
 public class Motorista implements Serializable {
 
 	private static final long serialVersionUID = 5236393908668102442L;
-
 	private long id;
 	private String nome;
 	private Collection<Carro> carros;
+	private Collection<Recarga> recargas;
 	private double creditos;
 	private boolean status;
 
@@ -53,4 +53,11 @@ public class Motorista implements Serializable {
 		this.status = status;
 	}
 
+	public Collection<Recarga> getRecargas() {
+		return recargas;
+	}
+
+	public void setRecargas(Collection<Recarga> recargas) {
+		this.recargas = recargas;
+	}
 }

@@ -6,14 +6,15 @@ public class Carro implements Serializable {
 
 	private static final long serialVersionUID = 4149085837268143831L;
 
-	private int id;
+	private long id;
 	private String placa;
+	private boolean status;
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -23,6 +24,14 @@ public class Carro implements Serializable {
 
 	public void setPlaca(String placa) {
 		this.placa = placa;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
 
 }
