@@ -10,6 +10,6 @@
         android:textColor="#00aeef"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Realizar recarga" />
+        android:text="Atualizar vagas" />
 
 </LinearLayout>

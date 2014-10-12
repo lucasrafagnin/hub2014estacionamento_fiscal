@@ -2,16 +2,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00aeef"
     android:orientation="vertical" >
 
-    <include layout="@layout/titulo" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo2" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#fff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="#303030"
+            android:padding="10dp"
+            android:text="Buscar"
+            android:textColor="#fff" />
+    </LinearLayout>
 
     <ListView
         android:id="@+id/list_carros"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
-    
+        android:layout_weight="1"
+        android:visibility="invisible" />
+
     <include layout="@layout/footer" />
 
 </LinearLayout>

@@ -6,35 +6,12 @@
     android:gravity="center"
     android:orientation="horizontal" >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/logo" />
-
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="0dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:gravity="center"
-        android:text="Meus carros"
         android:textColor="#fff"
         android:textSize="21sp" />
-
-    <Button
-        android:id="@+id/add_carro"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/addcarro_background"
-        android:gravity="center"
-        android:paddingBottom="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="5dp"
-        android:text="adicionar"
-        android:textSize="13sp" />
 
 </LinearLayout>
