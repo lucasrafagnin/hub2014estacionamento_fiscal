@@ -6,11 +6,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView.FindListener;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class AdapterListExercicios<Carro> extends BaseAdapter {
+import com.mmidgard.hubestacionamento.models.Carro;
+
+public class AdapterListExercicios extends BaseAdapter {
 
 	private Context context;
 	private List<Carro> listaCarros;
@@ -42,9 +44,12 @@ public class AdapterListExercicios<Carro> extends BaseAdapter {
 		final Carro carro = listaCarros.get(posicao);
 		View viewItem = mInflater.inflate(R.layout.carro_item, null);
  
-		TextView status = (TextView)viewItem.findViewById(R.id.carro_status);
+		ImageView status = (ImageView)viewItem.findViewById(R.id.carro_status);
 		TextView nome = (TextView)viewItem.findViewById(R.id.carro_nome);
 		TextView placa = (TextView)viewItem.findViewById(R.id.carro_placa);
+
+		nome.setText(carro.getNome());
+		placa.setText(carro.getPlaca());
 		
 		return viewItem;
 	}

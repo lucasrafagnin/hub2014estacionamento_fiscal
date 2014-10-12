@@ -8,7 +8,14 @@ public class Carro implements Serializable {
 
 	private long id;
 	private String placa;
+	private String nome;
 	private boolean status;
+
+	public Carro(String placa, String nome, boolean status) {
+		this.placa = placa;
+		this.nome = nome;
+		this.status = status;
+	}
 
 	public long getId() {
 		return id;
@@ -32,6 +39,14 @@ public class Carro implements Serializable {
 
 	public void setStatus(boolean status) {
 		this.status = status;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 }
